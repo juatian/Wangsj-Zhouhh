@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>我💖们</title>
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+            background-image: url('https://raw.githubusercontent.com/we11cheng/we11cheng.github.io/master/bg.jpg');
+            font-size: 85%;
+            margin: 0;
+        }
+        
+        h2 {
+            font-size: 220%;
+            font-weight: 400;
+        }
+        
+        .content {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translate(0, -50%);
+            text-align: center;
+        }
+        
+        .timer {
+            font-size: 180%;
+            line-height: 1.5;
+            margin: 1em 0;
+        }
+        
+        .timer b {
+            color: rgb(253, 99, 125);
+        }
+
+.cs {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            position: absolute;
+            text-align: center;
+        }
+         .music {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;          
+            position: absolute;
+            text-align: center;
+        }
+img#logo {
+            width: 128px;
+            background-size: cover;
+            border-radius: 200px;
+            box-shadow: 0px 0px 40px rgba(63, 81, 181, 0.72);
+            border: 3px solid #00a0ff;
+            opacity: 1;
+            margin: 0 auto;
+            margin-top: 45px;
+            margin-bottom: 20px;
+            transition: all 1.0s;
+        }
+        #logo:hover {
+            box-shadow: 0 0 10px #fff;
+            -webkit-box-shadow: 0 0 19px #fff;
+            transform: rotate(360deg);
+            -ms-transform: rotate(360deg); /* IE 9 */
+            -moz-transform: rotate(360deg); /* Firefox */
+            -webkit-transform: rotate(360deg); /* Safari 和 Chrome */
+            -o-transform: rotate(360deg); /* Opera */
+            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+        }
+    </style>
+</head>
+
+<body>
+<div class="cs">
+    <img src="http://m.qpic.cn/psc?/V14XIPpR1pVnO7/bqQfVz5yrrGYSXMvKr.cqWpijmW8h*aQ3iqW5nSctTPFbhnqbMrdkvZFGKNbq*WLGEXFkdCGVLwW5nqa*djlSzD2YEbZ7IERDwaGVBEwlZI!/b&bo=NgQ3BDYENwQBFzA!&rf=viewer_4" id="logo">
+<img src="http://m.qpic.cn/psc?/V14XIPpR1pVnO7/bqQfVz5yrrGYSXMvKr.cqU1klIaLusUMHtcFjUa.2aMu3duARmVKSMmxoxNCznJ0YhLmsGniPNcdCFuY2bQ9INzOGYcsNKs1mMOrm6X.dgs!/b&bo=pAKkAqQCpAIBFzA!&rf=viewer_4" id="logo">
+</div>
+<div class="music">
+<!--     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=282 height=86 src="https://music.163.com/outchain/player?type=2&id=34341360&auto=1&height=66"></iframe> -->
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="https://music.163.com/outchain/player?type=2&id=29750751&auto=1&height=32"></iframe>   
+</div>
+    <div class="content">
+        <h2>和晗晗在一起的</h2>
+       <div class="timer">
+            第 <b id="d"></b> 天，第 <b id="h"></b> 个小时，第 <b id="m"></b> 分钟，第 <b id="s"></b> 秒
+        </div>
+        <h1>心愿是可以天天开心</h1>
+    </div>
+    <script language="javascript">
+        function timer() {
+          window.setTimeout("show_date_time()", 1000);
+          var start = new Date("2022-07-13 00:00:00"); // 2015.7.2
+            var t = new Date().getTime() - start;
+            var h = ~~(t / 1000 / 60 / 60 % 24);
+            if (h < 10) {
+                h = "0" + h;
+            }
+            var m = ~~(t / 1000 / 60 % 60);
+            if (m < 10) {
+                m = "0" + m;
+            }
+            var s = ~~(t / 1000 % 60);
+            if (s < 10) {
+                s = "0" + s;
+            }
+            document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
+            document.getElementById('h').innerHTML = h;
+            document.getElementById('m').innerHTML = m;
+            document.getElementById('s').innerHTML = s;
+        }
+        timer();
+    </script>
+    <!-->
+    <script language="javascript">
+	    function show_date_time() {
+	        window.setTimeout("show_date_time()", 1000);
+	        BirthDay = new Date("07/13/2022 00:00:00");//这个日期是可以修改的
+	        today = new Date();
+	        timeold = (today.getTime() - BirthDay.getTime());
+	        sectimeold = timeold / 1000
+	        secondsold = Math.floor(sectimeold);
+	        msPerDay = 24 * 60 * 60 * 1000
+	        e_daysold = timeold / msPerDay
+	        daysold = Math.floor(e_daysold);
+	        e_hrsold = (e_daysold - daysold) * 24;
+	        hrsold = Math.floor(e_hrsold);
+	        e_minsold = (e_hrsold - hrsold) * 60;
+	        minsold = Math.floor((e_hrsold - hrsold) * 60);
+	        seconds = Math.floor((e_minsold - minsold) * 60);
+          document.getElementById('d').innerHTML = daysold;
+          document.getElementById('h').innerHTML = hrsold;
+          document.getElementById('m').innerHTML = minsold;
+          document.getElementById('s').innerHTML = seconds;
+	    }
+	    show_date_time();
+	</script>
+  <!-->
+
+</body>
+
+</html>
